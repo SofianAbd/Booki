@@ -9,6 +9,38 @@
     --filter-bg-color: #DEEBFF;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 19px;
+    
+}
+
+nav {
+    display:flex;
+    justify-content: center;
+}
+
+nav ul {
+    display:flex;
+    list-style: none;
+    gap:50px;
+    padding-left: 0%;
+}
+
+.lien {
+    color:black;
+    text-decoration: none;
+}
+
+.lien:hover {
+    color:blue;
+}
+
 .fa-solid {
     color: var(--main-color);
 }
@@ -53,6 +85,51 @@ body {
     color: var(--main-bg-color)
 }
 
+/****** Style du formulaire ***********/
+
+form {
+    display: flex;
+    align-items: center;
+    height: 49px;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px;
+    width:fit-content;
+}
+
+.arrondiegauche {    
+    width: 50px;
+    height: 49px;
+    left: 0px;
+    top: 0px;
+    background-color:#F2F2F2;
+    border-radius: 15px 0px 0px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.champ {
+    height: 100%;
+    box-sizing: border-box;
+    border:none;
+}
+
+.rechercher {
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #0065FC;
+    border: none;
+    border-radius: 0px 15px 15px 0px;
+    color:white;
+    font-weight: 700;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.fa-location-dot {
+    color:black;
+    height: 18px;
+}
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
