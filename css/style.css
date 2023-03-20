@@ -85,6 +85,32 @@ body {
     color: var(--main-bg-color)
 }
 
+/****** Filtres ***********/
+
+.filtres {
+    display: flex;
+    font-weight: 700;
+}
+
+.filtres ul {
+    padding-left: 15px;
+    gap:10px;
+    display: flex;
+}
+
+button {
+    background-color: white;
+    border-radius: 25px;
+    height: 50px;
+    font-size: 16px;
+    border: 2px solid #D9D9D9;
+    font-weight: 700;
+    align-items: center;
+}
+
+.fa-solid 
+    
+
 /****** Style du formulaire ***********/
 
 form {
