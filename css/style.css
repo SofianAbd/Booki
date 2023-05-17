@@ -34,12 +34,19 @@ nav ul {
     list-style: none;
     gap:50px;
     margin: 0;
+    height: 40px;
 }
 
 nav li {
     display: flex;
     align-items: center;
-    margin-top: 16px;
+    padding-top: 16px;
+    box-sizing: border-box;
+}
+
+nav li:hover {
+    border-top: solid 2px #0065FC;
+    padding-bottom: 2px;
 }
 
 .lien {
@@ -111,6 +118,8 @@ body {
     list-style-type: none;
 }
 
+
+
 button {
     background-color: white;
     border-radius: 25px;
@@ -119,6 +128,10 @@ button {
     border: 2px solid #D9D9D9;
     font-weight: 700;
     align-items: center;
+}
+
+.filtres button {
+    display:flex;
 }
 
 .filtres button:hover {
@@ -139,6 +152,8 @@ button .fa-solid {
     padding: 1px 4px;
     font-size: 11px;
     margin-right: 10px;
+    padding-bottom: 2px;
+    margin-top: 2px;
 }
 
 .info {
@@ -147,6 +162,9 @@ button .fa-solid {
 }
 
 /****** Style du formulaire ***********/
+.formulaire {
+    display: flex;
+}
 
 form {
     display: flex;
@@ -176,22 +194,55 @@ form {
 }
 
 .rechercher {
-    height: 100%;
     box-sizing: border-box;
-    background-color: #0065FC;
+    background-color: transparent;
     border: none;
-    border-radius: 0px 15px 15px 0px;
-    color:white;
+    
     font-weight: 700;
     padding-left: 16px;
     padding-right: 16px;   
-    font-size: 18px;  
+    font-size: 18px;
+    position: absolute;
+    top:0 ; 
+    bottom:0 ;
+    width: 100%;
+}
+
+.boiterechercher {
+    position: relative;
+    height: 49px;
+    width: 132px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white
+
 }
 
 .fa-location-dot {
     color:black;
     height: 18px;
 }
+
+.rechercher {
+    display: flex;
+    width: 100%;
+    color: white;
+    text-align: center;
+    height: 100%;
+    background-color: #0065FC;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway';
+    font-weight: 700;
+    border-radius: 0px 15px 15px 0px;
+}
+
+
+.fa-magnifying-glass {
+    display: none;
+}
+
 /****** Hebergements And Populaires ***********/
 .neutral-star {
     color: #F2F2F2;
@@ -398,9 +449,6 @@ footer .footer-column {
         justify-content: space-between;
     }
 
-    .populaires-cards .card {
-    }
-
     .populaires-cards .card-title {
         font-size: 14px;
     }
@@ -457,6 +505,115 @@ footer .footer-column {
     .filtres button {
         width:100%;
     }
+
+    .populaires-cards {
+        flex-direction: column;
+    }
+
+    .populaires a {
+        width: 100%;
+    }
+
+    .main-container {
+        padding: 0;
+    }
+
+    .haut {
+        padding: 0 50px;
+    }
+
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+    }
+
+    .hebergements-and-populaires section{
+        border-radius: 0%;
+    }
+
+    .hebergements-cards {
+        flex-direction: column;
+    }
+
+    .hebergements-cards .card {
+        width: 100%;
+    }
+
+    .hebergements-and-populaires .hebergements {
+        background-color:white ;
+    }
+
+    .activités-card {
+        flex-direction: column;
+    }
+
+    .activités-card .card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    footer {
+        flex-direction: column;
+        height: 530px;
+    }
+
+    footer .footer-column {
+        width:50%;
+        padding-left: 40px;
+    }
+
+    nav li:hover {
+        border-top:  none;
+        border-bottom: solid 2px #0065FC;
+    }
+    
+    .rechercher {
+        display: none;
+    }
+
+    .fa-magnifying-glass {
+        display: contents;
+    }
+
+    .rechercher {
+        flex-grow: 1;
+    }
+
+    .boiterechercher {
+        width: 49px;
+        background-color: #0065FC;
+        border-radius: 15px;
+    }
+
+    .champ {
+        width:calc(100% - 49px);
+    }
+
+    .fa-magnifying-glass {
+        color: white;
+    }
+
+    form {
+        width:90%;
+    }
+
+    .formulaire {
+        justify-content: space-around;
+    }
+
+    .haut {
+        padding: 0 25px;
+    }
+
+    .haut ul {
+        padding-left: 0;
+    }
+}
+
+
+@media (max-width: 370px) {
+    ul button {
+        font-size: 13px;
+    }
 }
 
 /* Réduction de la police et des margins pour les textes des cards */
@@ -472,4 +629,4 @@ footer .footer-column {
     .hebergements .card-rating {
         margin: 6px 5px
     }
-}
+}   
